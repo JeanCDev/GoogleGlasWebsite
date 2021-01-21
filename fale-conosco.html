@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/_css/estilo.css">
+  <link rel="stylesheet" href="/_css/form.css">
+  <title>Especificações</title>
+</head>
+
+<body>
+
+  <div id="interface">
+    <header id="header">
+      <hgroup>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+      </hgroup>
+
+      <img id="icon" src="/_imagens/contato.png" alt="Google glass">
+
+      <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul type="circle">
+          <li onmouseover="changePhoto('_imagens/home.png')"
+            onmouseout="changePhoto('_imagens/glass-oculos-preto-peq.png')">
+            <a href="index.html">Home</a>
+          </li>
+          <li onmouseover="changePhoto('_imagens/especificacoes.png')"
+            onmouseout="changePhoto('_imagens/glass-oculos-preto-peq.png')">
+            <a href="specs.html">Especificações</a>
+          </li>
+          <li onmouseover="changePhoto('_imagens/fotos.png')"
+            onmouseout="changePhoto('_imagens/glass-oculos-preto-peq.png')">
+            <a href="fotos.html">Fotos</a>
+          </li>
+          <li onmouseover="changePhoto('_imagens/multimidia.png')"
+            onmouseout="changePhoto('_imagens/glass-oculos-preto-peq.png')">
+            <a href="multimidia.html">Multimídia</a>
+          </li>
+          <li onmouseover="changePhoto('_imagens/contato.png')"
+            onmouseout="changePhoto('_imagens/glass-oculos-preto-peq.png')">
+            <a href="fale-conosco.html">Fale conosco</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="body-full">
+      <article id="main-news">
+        <header id="hgroup-header">
+          <hgroup>
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Entre em contato conosco</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class='right'>Atualizado em 01/Maio/2013</h3>
+          </hgroup>
+        </header>
+
+        <form action="" method="POST" id="contact" oninput="totalCalc()">
+
+          <fieldset id="user">
+            <legend>Identificação do Usuário</legend>
+            <p>
+              Nome:
+              <input type="text" name="name" size="20" maxlength="30" placeholder="Nome Completo" id="name">
+            </p>
+            <p>
+              Senha:
+              <input type="password" name="password" placeholder="Senhas" maxlength="16" size="16" id="password">
+            </p>
+            <p>
+              Email:
+              <input type="email" size="20" maxlength="40" placeholder="Email" id="email">
+            </p>
+            <fieldset id="gender">
+              <legend>Sexo</legend>
+              <label for=""></label>
+              <input type="radio" name="gender" id="man"> 
+              <label for="man">Masculino</label> <br>
+              <input type="radio" name="gender" id="woman">
+              <label for="woman">Feminino</label>
+            </fieldset>
+            Data de Nascimento:
+            <input type="date" name="birthday" id="bithday">
+          </fieldset>
+
+          <fieldset id='address'>
+            <legend>Endereço do Usuário</legend>
+            <p>
+              Logradouro:
+              <input type="text" size="13" id="street" placeholder="Rua, Av, Travessa">
+            </p>
+            <p>
+              Número:
+              <input type="number" name="number" id="number" min="0" max="99999" placeholder="Número"> 
+            </p>
+            <p>
+              Estado:
+              <select name="state" id="state">
+                <option selected disabled>Escolha o estado</option>
+                <optgroup label="Região Sul">
+                  <option value="RJ">SC</option>
+                </optgroup>
+                <optgroup label="Região Sudeste">
+                  <option value="SP">SP</option>
+                </optgroup>
+                <optgroup label="Região Central">
+                  <option value="MG">MG</option>
+                </optgroup>
+              </select>
+            </p>
+            <p>
+              Cidade:
+              <input type="text" maxlength="40" size="20" name="city" id="city" placeholder="Digite sua cidade" list="citys">
+              <datalist id="citys">
+                <option value="Rio de Janeiro"></option>
+                <option value="Nova Iguaçu"></option>
+                <option value="Niterói"></option>
+              </datalist>
+            </p>
+          </fieldset>
+
+          <fieldset id="message">
+            <legend>Mensagem do Usuário</legend>
+            <p>
+              Grau de Urgência:
+              <input type="range" name="urg" id="urg" min="0" max="10" step="2">
+            </p>
+            <p>
+              Mensagem:
+              <textarea name="" id="" placeholder="Digite sua mensagem" cols="30" rows="5"></textarea>
+            </p>
+          </fieldset>
+
+          <fieldset id="order">
+            <legend>Quero um Google Glass</legend>
+            <p>
+              <input type="checkbox" name="wGG" id="wGG">
+              Gostaria de adquirir um Google Glass quando disponível  
+            </p>
+            <p>
+              Cor:
+              <input type="color" name="color" id="color">
+            </p>
+            <p>
+              Quantidade:
+              <input type="number" id="qtdGG" id="qtdGG" placeholder="Qauntidade">
+            </p>
+            <p>
+              Preço Total: R$
+              <input type="text" name="total" id="total" readonly placeholder="Total a pagar">
+            </p>
+          </fieldset>
+
+
+          <button type="submit">Enviar</button>
+        </form>
+
+        <footer id="footer">
+          Copyright 2013 - by Gustavo Guanabara <br>
+          <a href="">Facebook</a> | <a href="">Twitter</a>
+        </footer>
+      </article>
+    </section>
+
+  </div>
+
+  <script src="/_javascript/funcoes.js"></script>
+</body>
+
+</html>

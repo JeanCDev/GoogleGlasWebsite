@@ -1,0 +1,15 @@
+section#content{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+iframe#frame-spec{
+  width: 400px;
+  height: 280px;
+  border: none;
+  overflow: hidden !important;
+}
+
+iframe#frame-spec::-webkit-scrollbar{
+  display: none;
+}
